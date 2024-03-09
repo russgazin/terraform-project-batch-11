@@ -8,7 +8,7 @@ resource "aws_route_table" "rtb" {
   }
 
   tags = {
-    Name = "${var.gateway_id == null ? "private" : "public"}_rtb"
+    Name = "${var.gateway_id != null ? "public" : "private"}_rtb"
   }
 }
 
